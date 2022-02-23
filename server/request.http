@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "adminnn",
+    "password": "admin"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjEzYmIxMTgzZGJiOTg0ZTg5NGJiMGEiLCJpYXQiOjE2NDU1NDQ3MjN9.KqLkFEajR_9U75weeWrUX7GdroZs3Z9Edb5Yb0HR0JA
+
+{    
+    "title": "NodeJS",
+    "description": "NodeJS is a library",
+    "url": "nodejs.org",
+    "status": "",
+    "user": ""
+}
+
+###
+GET  http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjEzYmIxMTgzZGJiOTg0ZTg5NGJiMGEiLCJpYXQiOjE2NDU1NDQ3MjN9.KqLkFEajR_9U75weeWrUX7GdroZs3Z9Edb5Yb0HR0JA
+
+###
+PUT http://localhost:5000/api/posts/6215054678b9f5822f6b2de5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjEzYmIxMTgzZGJiOTg0ZTg5NGJiMGEiLCJpYXQiOjE2NDU1NDQ3MjN9.KqLkFEajR_9U75weeWrUX7GdroZs3Z9Edb5Yb0HR0JA
+
+{
+    "title": "React",
+    "description": "React is a library",
+    "url": "react.org",
+    "status": "LEARNING",  
+    "user": ""  
+}
